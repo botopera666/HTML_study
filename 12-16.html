@@ -1,0 +1,16 @@
+//이벤트 연결
+$('#left-button').click(function () {
+    if (currentPage>0) {
+        //왼쪽으로 이동
+        currentPage=currentPage-1;
+        changePage();
+    }
+});
+
+$('#right-button').click(function () {
+    if (currentPage<count-1) {
+        //오른쪽으로 이동
+        currentPage=currentPage+1;
+        changePage();
+    }
+});

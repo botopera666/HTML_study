@@ -1,0 +1,14 @@
+//두 번째 ready 이벤트
+$(document).ready(function () {
+    //변수 선언
+    var currentPage=0;
+    var changePage=function () {
+        $('[data-role="slider"]> .container').animate({
+            left: -currentPage*width
+        }, 500);
+    };
+
+    //이벤트 연결
+    $('#left-button').click(function () { });
+    $(#right-button').click(function () { });
+});

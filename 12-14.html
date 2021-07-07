@@ -1,0 +1,23 @@
+//첫 번째 ready 이벤트
+$(document).ready(function () {
+    //변수 선언
+    var width=$('[data-role="slider"]').attr('data-width');
+    var height=$('[data-role="slider"]').attr('data-height');
+    var count=$('[data-role="slider"].div.item').length;
+
+    //스타일 적용
+    $('[data-role="slider"]').css({
+        position: 'relative',
+        overflow: 'hidden',
+        width: width,
+        height: height
+    }).find('.container').css({
+        position: 'absolute',
+        width: count*width,
+        overflow: 'hidden'
+    }).find('.item').css({
+        width: width,
+        height: height,
+        float: 'left'
+    });
+});
